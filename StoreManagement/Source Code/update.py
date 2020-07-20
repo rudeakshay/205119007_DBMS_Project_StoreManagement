@@ -21,80 +21,80 @@ if result:
 
 
 class Database:
-    def __init__(self, master, *args, **kwargs):
-        self.master = master
-        self.heading = Label(master, text="Update To The Database", font=('arial 40 bold'), fg='steelblue')
+    def __init__(self, main, *args, **kwargs):
+        self.main = main
+        self.heading = Label(main, text="Update To The Database", font=('arial 40 bold'), fg='steelblue')
         self.heading.place(x=400, y=0)
 
         # label and entry for id
-        self.id_le = Label(master, text="Enter ID", font=("arial 18 bold"))
+        self.id_le = Label(main, text="Enter ID", font=("arial 18 bold"))
         self.id_le.place(x=0, y=70)
 
-        self.id_leb = Entry(master, width=10, font=('arial 20 bold'))
+        self.id_leb = Entry(main, width=10, font=('arial 20 bold'))
         self.id_leb.place(x=400, y=70)
 
-        self.btn_search = Button(master, text="Search", width=15, height=2, bg='orange', command=self.search)
+        self.btn_search = Button(main, text="Search", width=15, height=2, bg='orange', command=self.search)
         self.btn_search.place(x=580, y=70)
 
         # labels for the window
-        self.name_l = Label(master, text="Enter Product Name", font=('arial 18 bold'))
+        self.name_l = Label(main, text="Enter Product Name", font=('arial 18 bold'))
         self.name_l.place(x=0, y=120)
 
-        self.stock_l = Label(master, text="Enter Stocks", font=("arial 18 bold"))
+        self.stock_l = Label(main, text="Enter Stocks", font=("arial 18 bold"))
         self.stock_l.place(x=0, y=170)
 
-        self.cp_l = Label(master, text="Enter Cost Price", font=("arial 18 bold"))
+        self.cp_l = Label(main, text="Enter Cost Price", font=("arial 18 bold"))
         self.cp_l.place(x=0, y=220)
 
-        self.sp_l = Label(master, text="Enter Selling Price", font=("arial 18 bold"))
+        self.sp_l = Label(main, text="Enter Selling Price", font=("arial 18 bold"))
         self.sp_l.place(x=0, y=270)
 
-        self.totalcp_l = Label(master, text="Enter Total Cost Price", font=("arial 18 bold"))
+        self.totalcp_l = Label(main, text="Enter Total Cost Price", font=("arial 18 bold"))
         self.totalcp_l.place(x=0, y=320)
 
-        self.totalsp_l = Label(master, text="Enter Total Selling Price", font=("arial 18 bold"))
+        self.totalsp_l = Label(main, text="Enter Total Selling Price", font=("arial 18 bold"))
         self.totalsp_l.place(x=0, y=370)
 
-        self.vendor_l = Label(master, text="Enter Vendor Name", font=("arial 18 bold"))
+        self.vendor_l = Label(main, text="Enter Vendor Name", font=("arial 18 bold"))
         self.vendor_l.place(x=0, y=420)
 
-        self.vendor_phone_l = Label(master, text="Enter Vendor Phone Number", font=("arial 18 bold"))
+        self.vendor_phone_l = Label(main, text="Enter Vendor Phone Number", font=("arial 18 bold"))
         self.vendor_phone_l.place(x=0, y=470)
 
         # entries for lables
-        self.name_e = Entry(master, width=25, font=('arial 18 bold'))
+        self.name_e = Entry(main, width=25, font=('arial 18 bold'))
         self.name_e.place(x=400, y=120)
 
-        self.stock_e = Entry(master, width=25, font=('arial 18 bold'))
+        self.stock_e = Entry(main, width=25, font=('arial 18 bold'))
         self.stock_e.place(x=400, y=170)
 
-        self.cp_e = Entry(master, width=25, font=('arial 18 bold'))
+        self.cp_e = Entry(main, width=25, font=('arial 18 bold'))
         self.cp_e.place(x=400, y=220)
 
-        self.sp_e = Entry(master, width=25, font=('arial 18 bold'))
+        self.sp_e = Entry(main, width=25, font=('arial 18 bold'))
         self.sp_e.place(x=400, y=270)
 
-        self.totalcp_e = Entry(master, width=25, font=('arial 18 bold'))
+        self.totalcp_e = Entry(main, width=25, font=('arial 18 bold'))
         self.totalcp_e.place(x=400, y=320)
 
-        self.totalsp_e = Entry(master, width=25, font=('arial 18 bold'))
+        self.totalsp_e = Entry(main, width=25, font=('arial 18 bold'))
         self.totalsp_e.place(x=400, y=370)
 
-        self.vendor_e = Entry(master, width=25, font=('arial 18 bold'))
+        self.vendor_e = Entry(main, width=25, font=('arial 18 bold'))
         self.vendor_e.place(x=400, y=420)
 
-        self.vendor_phone_e = Entry(master, width=25, font=('arial 18 bold'))
+        self.vendor_phone_e = Entry(main, width=25, font=('arial 18 bold'))
         self.vendor_phone_e.place(x=400, y=470)
 
         # button to add to the database
-        self.btn_clear = Button(master, text="Clear All Fields", width=25, height=2, bg='red', fg='white')
+        self.btn_clear = Button(main, text="Clear All Fields", width=25, height=2, bg='red', fg='white')
         self.btn_clear.place(x=320, y=520)
 
-        self.btn_update = Button(master, text="Update Database", width=25, height=2, bg='steelblue', fg='white', command=self.update)
+        self.btn_update = Button(main, text="Update Database", width=25, height=2, bg='steelblue', fg='white', command=self.update)
         self.btn_update.place(x=520, y=520)
 
         # text box for the logs
-        self.tBox = Text(master, width=60, height=20)
+        self.tBox = Text(main, width=60, height=20)
         self.tBox.place(x=800, y=70)
         self.tBox.insert(END, "")
 
