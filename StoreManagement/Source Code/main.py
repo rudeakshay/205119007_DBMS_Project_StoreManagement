@@ -29,14 +29,14 @@ product_id =[]
 lables_list = []
 
 class Application:
-    def __init__(self, master, *args, **kwargs):
+    def __init__(self, main, *args, **kwargs):
 
-        self.master = master
+        self.main = main
         # frames
-        self.left = Frame(master, width=700, height=768, bg='white')
+        self.left = Frame(main, width=700, height=768, bg='white')
         self.left.pack(side=LEFT)
 
-        self.right = Frame(master, width=666, height=768, bg='lightblue')
+        self.right = Frame(main, width=666, height=768, bg='lightblue')
         self.right.pack(side=RIGHT)
 
         # components
@@ -78,9 +78,9 @@ class Application:
         self.total_l= Label(self.right, text="", font=('arial 40 bold'), bg='lightblue', fg='white')
         self.total_l.place(x=0, y=600)
 
-        self.master.bind("<Return>", self.ajax)
-        self.master.bind("<Up>", self.add_to_cart)
-        self.master.bind("<space>", self.generate_bill)
+        self.main.bind("<Return>", self.ajax)
+        self.main.bind("<Up>", self.add_to_cart)
+        self.main.bind("<space>", self.generate_bill)
 
     def ajax(self, *args, **kwargs):
         self.get_id=self.enteride.get()

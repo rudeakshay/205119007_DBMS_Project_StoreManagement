@@ -20,65 +20,65 @@ if result:
         id = r[0]
 
 class Database:
-    def __init__(self, master, *args, **kwargs):
+    def __init__(self, main, *args, **kwargs):
 
-        self.master = master
-        self.heading = Label(master, text="Add To The Database", font=('arial 40 bold'), fg='steelblue')
+        self.main = main
+        self.heading = Label(main, text="Add To The Database", font=('arial 40 bold'), fg='steelblue')
         self.heading.place(x=450, y=0)
 
         # labels for the window
-        self.name_l = Label(master, text="Enter Product Name", font=('arial 18 bold'))
+        self.name_l = Label(main, text="Enter Product Name", font=('arial 18 bold'))
         self.name_l.place(x=0, y=70)
 
-        self.stock_l = Label(master, text="Enter Stocks", font=("arial 18 bold"))
+        self.stock_l = Label(main, text="Enter Stocks", font=("arial 18 bold"))
         self.stock_l.place(x=0, y=120)
         
-        self.cp_l = Label(master, text="Enter Cost Price", font=("arial 18 bold"))
+        self.cp_l = Label(main, text="Enter Cost Price", font=("arial 18 bold"))
         self.cp_l.place(x=0, y=170)
         
-        self.sp_l = Label(master, text="Enter Selling Price", font=("arial 18 bold"))
+        self.sp_l = Label(main, text="Enter Selling Price", font=("arial 18 bold"))
         self.sp_l.place(x=0, y=220)
         
-        self.vendor_l = Label(master, text="Enter Vendor Name", font=("arial 18 bold"))
+        self.vendor_l = Label(main, text="Enter Vendor Name", font=("arial 18 bold"))
         self.vendor_l.place(x=0, y=270)
         
-        self.vendor_phone_l = Label(master, text="Enter Vendor Phone Number", font=("arial 18 bold"))
+        self.vendor_phone_l = Label(main, text="Enter Vendor Phone Number", font=("arial 18 bold"))
         self.vendor_phone_l.place(x=0, y=320)
 
-        self.id_l = Label(master, text="Enter ID", font=("arial 18 bold"))
+        self.id_l = Label(main, text="Enter ID", font=("arial 18 bold"))
         self.id_l.place(x=0, y=370)
 
         # entries for lables
-        self.name_e = Entry(master, width=25, font=('arial 18 bold'))
+        self.name_e = Entry(main, width=25, font=('arial 18 bold'))
         self.name_e.place(x=400, y=70)
         
-        self.stock_e = Entry(master, width=25, font=('arial 18 bold'))
+        self.stock_e = Entry(main, width=25, font=('arial 18 bold'))
         self.stock_e.place(x=400, y=120)
         
-        self.cp_e = Entry(master, width=25, font=('arial 18 bold'))
+        self.cp_e = Entry(main, width=25, font=('arial 18 bold'))
         self.cp_e.place(x=400, y=170)
         
-        self.sp_e = Entry(master, width=25, font=('arial 18 bold'))
+        self.sp_e = Entry(main, width=25, font=('arial 18 bold'))
         self.sp_e.place(x=400, y=220)
         
-        self.vendor_e = Entry(master, width=25, font=('arial 18 bold'))
+        self.vendor_e = Entry(main, width=25, font=('arial 18 bold'))
         self.vendor_e.place(x=400, y=270)
         
-        self.vendor_phone_e = Entry(master, width=25, font=('arial 18 bold'))
+        self.vendor_phone_e = Entry(main, width=25, font=('arial 18 bold'))
         self.vendor_phone_e.place(x=400, y=320)
 
-        self.id_e = Entry(master, width=25, font=('arial 18 bold'))
+        self.id_e = Entry(main, width=25, font=('arial 18 bold'))
         self.id_e.place(x=400,y=370)
 
         # button to add to the database
-        self.btn_clear = Button(master, text="Clear All Fields", width=25, height=2, bg='red', fg='white', command=self.clear_all)
+        self.btn_clear = Button(main, text="Clear All Fields", width=25, height=2, bg='red', fg='white', command=self.clear_all)
         self.btn_clear.place(x=320, y=420)
 
-        self.btn_add = Button(master, text="Add To Database", width=25, height=2, bg='steelblue', fg='white', command = self.get_items)
+        self.btn_add = Button(main, text="Add To Database", width=25, height=2, bg='steelblue', fg='white', command = self.get_items)
         self.btn_add.place(x=520, y=420)
 
         # text box for the logs
-        self.tBox = Text(master, width=60, height=20)
+        self.tBox = Text(main, width=60, height=20)
         self.tBox.place(x=800, y=70)
         self.tBox.insert(END, "ID has reached upto: " + str(id))
 
